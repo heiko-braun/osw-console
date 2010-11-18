@@ -151,6 +151,33 @@
     </dependency>
   </dependencies>
     
+    <profiles>
+        <profile>
+            <id>console</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>     
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.1.1</version> 
+                        <executions>
+                            <execution>
+                                <phase>test</phase> 
+                                <goals>
+                                    <goal>java</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <mainClass>org.onesocialweb.client.console.ConsoleClient</mainClass>                           
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+
   <repositories>
  <repository>
             <id>vodafonernd.com</id>
